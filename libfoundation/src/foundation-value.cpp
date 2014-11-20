@@ -251,7 +251,6 @@ bool MCValueInter(MCValueRef p_value, MCValueRef& r_unique_value)
 	// If the value is already unique then this is just a copy.
 	if (MCValueIsUnique(p_value))
 	{
-		MCValueRetain(p_value);
 		r_unique_value = p_value;
 		return true;
 	}
